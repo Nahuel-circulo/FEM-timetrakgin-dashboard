@@ -58,9 +58,9 @@ function App() {
             <h3 className='profile-card__username'>Jeremy Robson</h3>
           </div>
           <div className='profile-card__actions'>
-            <button className={`${period === 'Day' ? 'active' : ''} btn`} onClick={()=> setPeriod('Day')}>Daily</button>
-            <button className={`${period === 'Week' ? 'active' : ''} btn`} onClick={()=> setPeriod('Week')}>Weekly</button>
-            <button className={`${period === 'Month' ? 'active' : ''} btn`} onClick={()=> setPeriod('Month')}>Monthly</button>
+            <button className={`${period === 'Day' ? 'active' : ''} btn`} onClick={() => setPeriod('Day')}>Daily</button>
+            <button className={`${period === 'Week' ? 'active' : ''} btn`} onClick={() => setPeriod('Week')}>Weekly</button>
+            <button className={`${period === 'Month' ? 'active' : ''} btn`} onClick={() => setPeriod('Month')}>Monthly</button>
           </div>
         </div>
         {
@@ -70,12 +70,28 @@ function App() {
               <div className="card-body">
                 <h3 className='card-body__title'>{item.title}</h3>
                 <img src={ellipsisIcon} alt="dots" />
-                {(period === 'Day') && (<h2 className='card-body__currently'>{item.timeframes.daily.current}hrs</h2>)}
 
-                {(period === 'Week') && (<h2 className='card-body__currently'>{item.timeframes.weekly.current}hrs</h2>)}
+                {(period === 'Day') && (
+                  <>
+                    <h2 className='card-body__currently'>{item.timeframes.daily.current}hrs</h2>
+                    <p className='card-body__last'>Last {period}-{item.timeframes.daily.previous}hrs</p>
+                  </>
+                )}
 
-                {(period === 'Month') && (<h2 className='card-body__currently'>{item.timeframes.monthly.current}hrs</h2>)}
-                <p className='card-body__last'>Last {period}-{item.timeframes.daily.previous}hrs</p>
+                {(period === 'Week') && (
+                  <>
+                    <h2 className='card-body__currently'>{item.timeframes.weekly.current}hrs</h2>
+                    <p className='card-body__last'>Last {period}-{item.timeframes.weekly.previous}hrs</p>
+                  </>
+                )}
+
+                {(period === 'Month') && (
+                  <>
+                    <h2 className='card-body__currently'>{item.timeframes.monthly.current}hrs</h2>
+
+                    <p className='card-body__last'>Last {period}-{item.timeframes.monthly.previous}hrs</p>
+                  </>
+                )}
               </div>
             </div>
           ))
