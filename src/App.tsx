@@ -53,7 +53,7 @@ function App() {
       <div className="dashboard">
         <div className="profile-card">
           <div className="profile-card__body">
-            <img src="/public/image-jeremy.png" alt="profile picture" />
+            <img src="/image-jeremy.png" alt="profile picture" />
             <p>Report for</p>
             <h3 className='profile-card__username'>Jeremy Robson</h3>
           </div>
