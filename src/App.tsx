@@ -1,11 +1,11 @@
-import exerciseIcon from './assets/icon-exercise.svg';
-import playIcon from './assets/icon-play.svg';
-import selfcareIcon from './assets/icon-self-care.svg';
-import socialIcon from './assets/icon-social.svg';
-import studyIcon from './assets/icon-study.svg';
-import workIcon from './assets/icon-work.svg';
-import ellipsisIcon from './assets/icon-ellipsis.svg';
-
+import exerciseIcon from '/icon-exercise.svg';
+import playIcon from '/icon-play.svg';
+import selfcareIcon from '/icon-self-care.svg';
+import socialIcon from '/icon-social.svg';
+import studyIcon from '/icon-study.svg';
+import workIcon from '/icon-work.svg';
+import ellipsisIcon from '/icon-ellipsis.svg';
+//@ts-ignore
 import data from './data/data.js';
 import { useState } from 'react';
 

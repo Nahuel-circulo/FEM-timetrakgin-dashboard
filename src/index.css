@@ -127,7 +127,7 @@ main {
   border-radius: 20px;
   overflow: hidden;
   display: grid;
-  min-width: 285px;
+  min-width: 230px;
   grid-template-rows: 50px auto;
 }
 
@@ -242,7 +242,7 @@ main {
   }
 
   .card-body{
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: auto 1fr;
   }
 
   .card-body__last {
