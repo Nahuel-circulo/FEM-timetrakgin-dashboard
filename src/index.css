@@ -51,16 +51,28 @@
 .card {
   background-color: var(--Dark-blue);
   position: relative;
-  border-radius: 10px;
+  border-radius: 20px;
   height: 200px;
   overflow: hidden;
+  display: grid;
+  grid-template-rows: 50px auto;
 }
 
 .card img {
   position: absolute;
   top: 0px;
   right: 30px;
+  
+}
 
+.card-body{
+  grid-row: 2;
+  background-color: var(--Dark-blue);
+  border-radius: 20px 20px 0px 0px;
+  z-index: 200;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 /* #profile-card{
@@ -86,6 +98,6 @@
   background-color: var(--Violet);
 }
 
-#self-care-card {
+#selfcare-card {
   background-color: var(--Soft-orange);
 }
